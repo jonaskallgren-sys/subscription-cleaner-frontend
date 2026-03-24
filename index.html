@@ -11,16 +11,29 @@
     <h1>Ta bort glömda prenumerationer</h1>
     <p>Se dina registrerade tjänster och klicka på "Avsluta" för att öppna avprenumerationssidan direkt.</p>
 
-    <label for="filter">Filtrera:</label>
-    <input id="filter" type="search" placeholder="Sök tjänst, kategori eller land" />
+    <div id="auth-section">
+      <h2>Logga in</h2>
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Lösenord" required />
+        <button type="submit">Logga in</button>
+      </form>
+      <button id="register-btn">Registrera nytt konto</button>
+      <div id="auth-message"></div>
+    </div>
 
-    <section id="subscription-list"></section>
-    <div id="empty-state" class="hidden">Inga tjänster matchar din sökning.</div>
+    <div id="app-section" style="display: none;">
+      <label for="filter">Filtrera:</label>
+      <input id="filter" type="search" placeholder="Sök tjänst eller land" />
+
+      <button id="scan-email">Skanna email</button>
+
+      <section id="subscription-list"></section>
+
+      <div id="empty-state" class="hidden">Inga tjänster matchar din sökning.</div>
+    </div>
   </main>
 
-  <div id="toast"></div>
-
-  <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
