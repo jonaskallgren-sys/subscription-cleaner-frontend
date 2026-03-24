@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscription Cleaner (Nordic)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Ta bort glömda prenumerationer</h1>
+    <p>Se dina registrerade tjänster och klicka på "Avsluta" för att öppna avprenumerationssidan direkt.</p>
+
+    <label for="filter">Filtrera:</label>
+    <input id="filter" type="search" placeholder="Sök tjänst, kategori eller land" />
+
+    <section id="subscription-list"></section>
+    <div id="empty-state" class="hidden">Inga tjänster matchar din sökning.</div>
+  </main>
+
+  <div id="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
